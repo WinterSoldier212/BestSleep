@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray"
+    android:id="@+id/relativeLayout">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cover_art_background"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="25dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gradient_bg_art" />
+
+        <!--  Обложка альбома -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cover_art"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_blur"
+            app:shapeAppearanceOverlay="@style/RoundedCornersImageView" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Текст для таймера -->
+            <TextView
+                android:id="@+id/textViewTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Хочу проснуться в ..."
+                android:textColor="@color/accent"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+            <!-- Контейнер для TimePicker  -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewTimer"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="16dp">
+
+                <TimePicker
+                    android:id="@+id/timePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_bg_art"
+                    android:timePickerMode="spinner"
+                    android:theme="@style/CustomTimePicker"
+                    />
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_below="@id/cover_art_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textForCalcSleepTime"
+        android:textColor="@color/accent"
+        android:textSize="16sp"
+        android:layout_alignStart="@id/cover_art_background"
+        android:layout_alignEnd="@id/cover_art_background"
+        android:gravity="center"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="12dp"
+
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/special_light_purple"
+        android:stateListAnimator="@animator/button_list_animator">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            android:background="?selectableItemBackground"
+
+            android:text="Рассчитать"
+            android:textColor="@color/accent"
+            android:textSize="15sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

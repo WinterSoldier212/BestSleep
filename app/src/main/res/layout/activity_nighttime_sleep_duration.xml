@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    >
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/special_light_purple"
+        >
+
+        <View
+            android:id="@+id/ic_moon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/ic_moon_1"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <TextView
+            android:id="@+id/text_duration_sleep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/ic_moon"
+
+            android:text="Во сколько примерно вы легли спать и проснулись?"
+            android:textColor="@color/accent"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/gradient_top_layout"
+        android:layout_below="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/gradient_overlay" />
+
+
+    <LinearLayout
+        android:id="@+id/center_layout"
+        android:layout_below="@id/gradient_top_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Уход ко сну"
+                android:textSize="16sp"
+                android:textColor="@color/accent"/>
+
+            <TimePicker
+                android:id="@+id/timePickerSleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:theme="@style/TimePickerStyle"
+                android:outlineSpotShadowColor="@color/accent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пробуждение"
+                android:textSize="16sp"
+                android:textColor="@color/accent"/>
+            <TimePicker
+                android:id="@+id/timePickerWakeUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:theme="@style/TimePickerStyle"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_sleep_quality_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Продолжить"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/special_light_purple"
+        android:paddingHorizontal="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/skip_nighttime_sleep_duration"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пропустить"
+        android:textColor="@color/super_mega_light_gray"
+        android:textSize="14sp"
+        android:textStyle="bold"
+
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@id/next_sleep_quality_button"
+        android:layout_alignBottom="@id/next_sleep_quality_button"
+        />
+
+</RelativeLayout>

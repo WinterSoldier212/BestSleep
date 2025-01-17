@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/super_light_gray">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Layout для номера, даты и процента -->
+            <RelativeLayout
+                android:id="@+id/relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:background="@color/special_light_purple"
+                >
+
+                <!-- Порядковый номер -->
+                <TextView
+                    android:id="@+id/dayNumberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="1."
+                    android:textColor="@color/accent"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <!-- Дата -->
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/dayNumberTextView"
+                    android:layout_alignEnd="@id/sleepQualityTextView"
+                    android:text="01.01.2024"
+                    android:textColor="@color/accent"
+                    android:gravity="center"
+                    android:textSize="22sp" />
+
+                <!-- Процент сна -->
+                <TextView
+                    android:id="@+id/sleepQualityTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:text="75%"
+                    android:textColor="@color/accent"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <!-- Текст для DiaryPage -->
+            <EditText
+                android:id="@+id/diaryPageTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_layout"
+                android:textColor="@color/accent"
+                android:textSize="16sp"
+                android:hint="Заполните страницу дневника\nОпишите ваш сон, самочувствие или настроение после сна"
+                android:textColorHint="@color/dark_accent"
+                android:paddingHorizontal="20dp"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView для кнопки -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/save_edit_diary_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/special_light_purple"
+        android:stateListAnimator="@animator/button_list_animator"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить изменения"
+            android:textColor="@color/color_for_text"
+            android:gravity="center"
+            android:padding="14dp"
+            android:background="?selectableItemBackground"
+            />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+

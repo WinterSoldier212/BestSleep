@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/diary_sleep_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Дневник сна"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/color_for_text"
+            android:gravity="center"
+            android:background="@color/special_light_purple"
+            android:padding="10dp"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/journalDayRecyclerView"
+
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_above="@id/closeButton"
+        android:layout_below="@id/diary_sleep_title"
+        android:padding="15dp"
+        android:backgroundTint="@color/gray"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/closeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/special_light_purple"
+        android:stateListAnimator="@animator/button_list_animator"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Закрыть"
+            android:textColor="@color/color_for_text"
+            android:gravity="center"
+            android:padding="14dp"
+            android:background="?selectableItemBackground"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

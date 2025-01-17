@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name" translatable="false">Лучший сон!</string>
+    <string name="textForCalcSleepTime" translatable="false">Можно спать 10 часов и встать разбитым, а можно подремать совсем чуть-чуть и совершать подвиги.\n\nХороший сон состоит из 5–6 полных циклов. Чтобы встать в бодром состоянии, запланируйте пробуждение в конце цикла.\n\nУчтите: обычно, чтобы заснуть, человеку нужно 14 минут.</string>
+
+    <string name="first_button">Режим и гигиена сна</string>
+    <string name="second_button">Питание и напитки</string>
+    <string name="third_button">Активность и образ жизни</string>
+    <string name="fourth_button">Создание комфортной среды</string>
+    <string name="fifth_button">Психологическая подготовка</string>
+
+    <string name="additionally_text">
+•  Каждый человек индивидуален, и не все советы могут подходить всем одинаково. Экспериментируйте и найдите то, что работает лучше всего для вас.\n\n
+•  Улучшение сна – это процесс, требующий времени и систематичности. Не ждите мгновенных результатов, но придерживайтесь рекомендаций на постоянной основе.\n\n
+•  Если проблемы со сном сохраняются, несмотря на соблюдение этих рекомендаций, важно обратиться к врачу-сомнологу.\n\n
+    </string>
+
+    <string name="sleep_quality_label">Качество сна</string>
+    <string name="sleep_tips_label">Советы для сна</string>
+    <string name="button_edit_day">Изменить</string>
+    <string name="features_label">Особенности</string>
+</resources>
